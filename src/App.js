@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import alanBtn from '@alan-ai/alan-sdk-web'
-import './App.css';
+//import './App.css';
 import NewsCards from './components/news-cards/news-cards'
+//import classes from '*.module.css';
+import useStyles from './styles.js';
 
 const alanKey = '651d745ff81c7c8e76f19ff45490e1c52e956eca572e1d8b807a3e2338fdd0dc/stage'
 
 const App = () => {
   const [newsArticles, setNewsArticles] = useState([]);
+  const classes = useStyles();
 
   useEffect(() => {
     alanBtn({
@@ -21,6 +24,9 @@ const App = () => {
 
   return (
     <div>
+      <div className={classes.logoContainer}>
+      <img src="https://alan.app/voice/images/previews/preview.jpg" className={classes.alanLogo} alt="alan logo"/>
+      </div>
       <NewsCards articles={newsArticles} />
     </div>
   )

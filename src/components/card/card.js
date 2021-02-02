@@ -12,11 +12,11 @@ import useStyles from './styles.js'
 
 const NewsCard = ({ article: { description, publishedAt, source, title, url, urlToImage }, i }) => {
     const classes = useStyles()
-
+// || 'https://alan.app/voice/images/previews/preview.jpg'
     return (
         <Card className={classes.card}>
             <CardActionArea href={url} target="_blank">
-                <CardMedia className={classes.media} image={urlToImage}/>
+                <CardMedia className={classes.media} image={urlToImage || 'https://alan.app/voice/images/previews/preview.jpg'}/>
                 <div className={classes.details}>
                     <Typography variant='body2' color='textSecondary'
                     component='h2'
