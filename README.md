@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Goal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created using React and the Alan API. I retrieve news data from a news API and programmed Alan to navigate our site to find categories and headlines from various news sites.
 
 ## Available Scripts
 
